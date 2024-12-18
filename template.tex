@@ -5,10 +5,10 @@
 
 \usepackage{geometry}
 \geometry{ 
-left=20mm,
-right=20mm,
-top=0mm,
-bottom=0mm,
+left=30mm,
+right=30mm,
+top=5mm,
+bottom=5mm,
 includehead,
 includefoot,
 headsep = 10mm,
@@ -18,13 +18,41 @@ footskip = 30mm
 \usepackage{tikz}
 \usepackage{pdfpages}
 
+\usepackage{lipsum}
+
+\usepackage{fontspec}
+\setmainfont[
+Path=fonts/,
+Extension=.ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+Scale=1.2,
+]{Roboto}
+
 \newcommand{\bgimage}[1]{
 	\begin{tikzpicture}[remember picture, overlay]
-	    \node[anchor=south west, at=(current page.south west)] {
-		\includegraphics[width=\paperwidth]{#1}
+	    \node[anchor=center, inner sep=0pt, outer sep=0pt, at=(current page.center)] {
+		\includegraphics[width=1.01\paperwidth]{#1}
 	    };
 	\end{tikzpicture}
 }
+
+\newcommand{\descriptionbox}[2]{
+	\begin{tikzpicture}[remember picture, overlay]
+	    \node[anchor=center,
+	    xshift=64mm, yshift=34mm,
+	    inner sep=0pt,
+	    at=(current page.south west),
+	    text width = 10cm] {
+		\begin{tabular}{lp{75mm}}
+			% \hline
+			\textbf{Empresa:} & #1\\
+			\textbf{Contacto:} & #2\\
+			% \hline
+		\end{tabular}
+	    };
+	\end{tikzpicture}
+	}
 
 \begin{document}
 	\input{content.tex}

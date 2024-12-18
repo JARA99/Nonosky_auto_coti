@@ -12,19 +12,25 @@
 
 \begin{flushright}
 
-% \sffamily
-% \arrayrulecolor{white}
-\arrayrulewidth=1pt
-\renewcommand{\arraystretch}{1.5}
-% \rowcolors[\hline]{3}{.!50!White}{}
-\rowcolors{3}{.!80!Black}{}
-\begin{tabular}{bg}
-  \multicolumn{2}{b}{\bfseries Cotización No. 0001}\\
-  % \rowcolor{.!50!Black}
-	Contacto & Danilo Gonzalez\\
-	Fecha & \today \\
-	Cliente & Nonosky\\
-\end{tabular}
+\cottab{0001}{Danilo Gonzalez}{\today}{Nonosky}
 
+\vspace{10pt}
+
+\desctab{Contado, cheque o transferencia}{30 días de crédito.}{1 mes aproximadamente.}
+
+\vspace{10pt}
+
+\rowcolors{3}{}{}
+
+\begin{tabular}{C{0.5\linewidth}C{0.15\linewidth}C{0.1\linewidth}C{0.15\linewidth}}
+% \toprule
+Descripción de proyecto A & Precio por unidad & Cantidad & Total \\
+% \midrule
+Instalación A & 1000.000000 & 3.000000 & 3000 \\
+Instalación B & 300.000000 & 40.000000 & 12000 \\
+Equipo C & 1200.000000 & 3.000000 & 3600 \\
+Total & NaN & NaN & 18600 \\
+% \bottomrule
+\end{tabular}
 
 \end{flushright}

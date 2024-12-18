@@ -38,8 +38,9 @@ Scale=1.2,
 % \newcolumntype{C}{>{\columncolor{FireBrick!50}}c}
 \newcolumntype{g}{>{\columncolor{Gray!40}}c}
 \newcolumntype{b}{>{\columncolor{Black}\color{White}}c}
-\newcolumntype{G}{>{\columncolor{Gray!40}}p}
-\newcolumntype{B}{>{\columncolor{Black}\color{White}}p}
+\newcolumntype{G}{>{\columncolor{Gray!40}}m}
+\newcolumntype{B}{>{\columncolor{Black}\color{White}}m}
+\newcolumntype{C}{>{\centering}m}
 
 
 \newcommand{\bgimage}[1]{
@@ -66,6 +67,31 @@ Scale=1.2,
 	    };
 	\end{tikzpicture}
 	}
+
+\newcommand{\cottab}[4]{
+	\arrayrulewidth=1pt
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{.!80!Black}{}
+	\begin{tabular}{bg}
+	  \multicolumn{2}{b}{\bfseries Cotización No. #1}\\
+		Contacto & #2\\
+		Fecha & #3\\
+		Cliente & #4\\
+	\end{tabular}
+	}
+
+\newcommand{\desctab}[3]{
+	\arrayrulewidth=1pt
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{.!80!Black}{}
+	\begin{tabular}{bg}
+	  \multicolumn{2}{b}{\bfseries Descripción de pago y entrega}\\
+		Tipo de pago & #1\\
+		Días de crédito & #2 \\
+		Tiempo de entrega & #3\\
+	\end{tabular}
+	}
+
 
 \begin{document}
 	\input{content.tex}

@@ -1,17 +1,18 @@
 \documentclass[letterpaper]{article}
 
 \usepackage[spanish,mexico]{babel}
+\usepackage[svgnames,table]{xcolor}
 \usepackage{graphicx}
 
 \usepackage{geometry}
 \geometry{ 
-left=30mm,
-right=30mm,
+left=20mm,
+right=20mm,
 top=5mm,
 bottom=5mm,
 includehead,
 includefoot,
-headsep = 10mm,
+headsep = 15mm,
 footskip = 30mm
 }
 
@@ -28,6 +29,18 @@ UprightFont=*-Regular,
 BoldFont=*-Bold,
 Scale=1.2,
 ]{Roboto}
+
+
+
+\newcommand*{\arraycolor}[1]{\protect\leavevmode\color{#1}}
+% \newcolumntype{A}{>{\columncolor{blue!50!white}}c}
+% \newcolumntype{B}{>{\columncolor{LightGoldenrod}}c}
+% \newcolumntype{C}{>{\columncolor{FireBrick!50}}c}
+\newcolumntype{g}{>{\columncolor{Gray!40}}c}
+\newcolumntype{b}{>{\columncolor{Black}\color{White}}c}
+\newcolumntype{G}{>{\columncolor{Gray!40}}p}
+\newcolumntype{B}{>{\columncolor{Black}\color{White}}p}
+
 
 \newcommand{\bgimage}[1]{
 	\begin{tikzpicture}[remember picture, overlay]

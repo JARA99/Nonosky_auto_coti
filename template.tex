@@ -1,0 +1,31 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[spanish,mexico]{babel}
+\usepackage{graphicx}
+
+\usepackage{geometry}
+\geometry{ 
+left=20mm,
+right=20mm,
+top=0mm,
+bottom=0mm,
+includehead,
+includefoot,
+headsep = 10mm,
+footskip = 30mm
+}
+
+\usepackage{tikz}
+\usepackage{pdfpages}
+
+\newcommand{\bgimage}[1]{
+	\begin{tikzpicture}[remember picture, overlay]
+	    \node[anchor=south west, at=(current page.south west)] {
+		\includegraphics[width=\paperwidth]{#1}
+	    };
+	\end{tikzpicture}
+}
+
+\begin{document}
+	\input{content.tex}
+\end{document}

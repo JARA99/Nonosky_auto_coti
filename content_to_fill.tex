@@ -1,0 +1,92 @@
+\section*{Registro de precipitación}
+% \vspace*{2.5cm}
+En la tabla \ref{tab:reg} se presenta la precipitación registrada en milímetros por la red de estaciones meteorológicas de INSIVUMEH para el trimestre anterior.
+En la figura \ref{fig:reg} se presenta el mapa de registro de precipitación con datos de ENACTS.
+
+% \vfill
+
+\begin{table}[H]
+    % \vspace{2cm}
+    \input{dep_tabs/##dep_code##_precip_register_202405-202407.tex}
+    \caption*{\footnotesize{Elaborado por la Sección de Aplicaciones Climáticas, con datos de la Sección de Climatología de INSIVUMEH, 2024.}}
+    \caption{Tabla de registros de precipitación}
+    \label{tab:reg}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{dep_maps/acum_202405/##dep_code##.png}
+        \caption{mayo.}
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{dep_maps/acum_202406/##dep_code##.png}
+        \caption{junio.}
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{dep_maps/acum_202407/##dep_code##.png}
+        \caption{julio.}
+    \end{subfigure}
+    \caption{Registro de precipitación de la temporada anterior.}
+    \label{fig:reg}
+\end{figure}
+
+\pagebreak
+
+\section*{Pronóstico de categorías de precipitación}
+En la figura \ref{fig:cat} se presenta el mapa de categorías de precipitación como resultado del LXXV Foro del Clima de América Central. Las regiones de color verde representan las ubicaciones donde se espera que la lluvia se presente por arriba de lo que normalmente llueve y en las regiones de color amarillo se esperan condiciones normales.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\linewidth,trim={0 4.2cm 0 3cm},clip]{dep_maps/cat_map.pdf}
+    \caption{Pronóstico de precipitación por categorías.}
+    \label{fig:cat}
+\end{figure}
+% \input{dep_maps/cat_tab.tex}
+
+\pagebreak
+
+\section*{Pronóstico de precipitación acumulada}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{dep_maps/nextgen_pronos_202408/##dep_code##.png}
+        \caption{agosto.}
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{dep_maps/nextgen_pronos_202409/##dep_code##.png}
+        \caption{septiembre.}
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{dep_maps/nextgen_pronos_202410/##dep_code##.png}
+        \caption{octubre.}
+    \end{subfigure}
+    \caption{Pronóstico de acumulados mensuales de precipitación.}
+\end{figure}
+
+\pagebreak
+
+\section*{Pronóstico de temperatura máxima promedio}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{dep_maps/tmax_202408/##dep_code##.png}
+        \caption{agosto.}
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{dep_maps/tmax_202409/##dep_code##.png}
+        \caption{septiembre.}
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{dep_maps/tmax_202409/##dep_code##.png}
+        \caption{octubre.}
+    \end{subfigure}
+    \caption{Pronóstico de temperatura máxima promedio por mes.}
+\end{figure}
